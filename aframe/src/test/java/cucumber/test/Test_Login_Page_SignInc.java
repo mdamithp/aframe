@@ -7,7 +7,7 @@ import junit.framework.Assert;
 import pages.LoginPage;
 import supportfiles.Driver;
 
-public class Test_Login_Page_SignIn {
+public class Test_Login_Page_SignInc {
 
 	@Given("^navigateLoginPage$")
 	public void navigateloginpage() {
