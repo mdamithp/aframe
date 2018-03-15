@@ -8,24 +8,23 @@ import pages.LoginPage;
 import supportfiles.Driver;
 
 public class Test_Login_Page_SignInc {
-
-	@Given("^navigateLoginPage$")
-	public void navigateloginpage() {
+	@Given("^Navigate to login page$")
+	public void navigate_to_login_page() {
 		Driver.goTo("firefox");
 		LoginPage.navigateToLogin();
 
 	}
 
-	@When("^signInAccount$")
-	public void signinaccount() {
-		LoginPage.SignIn("mdamithp@gmail.com", "12345");
+	@When("^Sign in to account with username as \"([^\"]*)\" and password as \"([^\"]*)\"$")
+	public void sign_in_to_account_with_username_as_and_password_as(String uname, String pass) {
+		LoginPage.SignIn(uname, pass);
 
 	}
 
-	@Then("^able to login to my account$")
-	public void able_to_login_to_my_account() {
-		Assert.assertEquals("My account - My Store", Driver.driver.getTitle());
-
+	@Then("^Verify my account page as title \"([^\"]*)\"$")
+	public void verify_my_account_page_as_title(String title) {
+		Assert.assertEquals(title, Driver.driver.getTitle());
 	}
+
 
 }
