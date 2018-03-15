@@ -15,7 +15,7 @@ public class Test_Home_Page {
 	public void navigate_to_home_page() {
 		Driver.goTo("firefox");
 		HomePage.navigateToHome();
-		ScreenShot.takeScreenShot(Driver.driver, "C:/Users/millaniyage.perera/Desktop/aframe/abc.png");
+		ScreenShot.takeScreenShot(Driver.driver, "C:/Users/millaniyage.perera/Desktop/aframe/aframerepo/aframe/target/ScreenShots/abc.png");
 	}
 
 	@When("^Insert search text as \"([^\"]*)\" in search box$")
